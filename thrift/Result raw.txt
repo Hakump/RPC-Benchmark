@@ -1,0 +1,370 @@
+Average time measured for packing int 10 time: 4.490 micro second.
+Average time measured for packing double 10 time: 2.336 micro second.
+Average time measured for packing string of length 8 10 time: 3.064 micro second.
+Average time measured for packing string of length 16 10 time: 2.323 micro second.
+Average time measured for packing string of length 32 10 time: 2.243 micro second.
+Average time measured for packing string of length 64 10 time: 2.288 micro second.
+Average time measured for packing string of length 128 10 time: 2.262 micro second.
+Average time measured for packing string of length 256 10 time: 2.264 micro second.
+Average time measured for packing string of length 512 10 time: 3.029 micro second.
+Average time measured for packing string of length 1024 10 time: 3.757 micro second.
+Average time measured for packing string of length 2048 10 time: 4.740 micro second.
+Average time measured for packing string of length 4096 10 time: 8.066 micro second.
+Average time measured for packing string of length 8192 10 time: 19.984 micro second.
+Average time measured for packing short msg 10 time: 3.235 micro second.
+SendLargeMsg flush time: 247
+SendLargeMsg flush time: 190
+SendLargeMsg flush time: 165
+SendLargeMsg flush time: 210
+SendLargeMsg flush time: 211
+SendLargeMsg flush time: 124
+SendLargeMsg flush time: 183
+SendLargeMsg flush time: 144
+SendLargeMsg flush time: 124
+SendLargeMsg flush time: 124
+Average time measured for packing large msg 10 time: 79.152 micro second.
+benchmark short message serialization: 1.2 us
+benchmark short message deserialization: 1.3 us
+benchmark double serialization: 0 us
+benchmark double deserialization: 0.3 us
+benchmark int serialization: 0 us
+benchmark int deserialization: 0 us
+TTL for ping() packet 0 : 257.625 micro second.
+TTL for ping() packet 1 : 93.852 micro second.
+TTL for ping() packet 2 : 79.271 micro second.
+TTL for ping() packet 3 : 79.013 micro second.
+TTL for ping() packet 4 : 74.860 micro second.
+Average TTL for ping() on 10 packets: 82.426 micro second.
+TTL for string packet 0 : 91457.611 micro second.
+TTL for string packet 1 : 87766.727 micro second.
+TTL for string packet 2 : 87123.674 micro second.
+TTL for string packet 3 : 86486.004 micro second.
+TTL for string packet 4 : 87426.488 micro second.
+Average TTL for ping() on 1 packets of size 4194304 Bytes: 87376.473 micro second.
+throughput: 48.0027 MegaBytes/Second
+
+
+Average TTL for ping() on 2 packets of size 16384 Bytes: 482.908 micro second.
+throughput: 33.9278 MegaBytes/Second
+
+Average TTL for ping() on 2 packets of size 262144 Bytes: 5949.876 micro second
+throughput: 44.0587 MegaBytes/Second
+
+Average TTL for ping() on 1 packets of size 1048576 Bytes: 22690.601 micro second.
+throughput: 46.2119 MegaBytes/Second
+
+Average TTL for ping() on 4 packets of size 524288 Bytes: 11034.235 micro second.
+throughput: 47.5147 MegaBytes/Second
+
+Average TTL for ping() on 6 packets of size 524288 Bytes: 10171.283 micro second.
+throughput: 51.5459 MegaBytes/Second
+->2 * 2^16 or 6 * 2 ^ 15 
+
+
+Optimized:
+Average time measured for packing int 10 time: 1.691 micro second.
+Average time measured for packing double 10 time: 0.633 micro second.
+Average time measured for packing string of length 8 10 time: 1.426 micro second.
+Average time measured for packing string of length 16 10 time: 0.612 micro second.
+Average time measured for packing string of length 32 10 time: 0.628 micro second.
+Average time measured for packing string of length 64 10 time: 0.594 micro second.
+Average time measured for packing string of length 128 10 time: 0.619 micro second.
+Average time measured for packing string of length 256 10 time: 0.664 micro second.
+Average time measured for packing string of length 512 10 time: 1.440 micro second.
+Average time measured for packing string of length 1024 10 time: 2.202 micro second.
+Average time measured for packing string of length 2048 10 time: 3.458 micro second.
+Average time measured for packing string of length 4096 10 time: 7.760 micro second.
+Average time measured for packing string of length 8192 10 time: 18.165 micro second.
+Average time measured for packing short msg 10 time: 0.883 micro second.
+SendLargeMsg flush time: 205
+SendLargeMsg flush time: 180
+SendLargeMsg flush time: 151
+SendLargeMsg flush time: 155
+SendLargeMsg flush time: 150
+SendLargeMsg flush time: 153
+SendLargeMsg flush time: 155
+SendLargeMsg flush time: 151
+SendLargeMsg flush time: 151
+SendLargeMsg flush time: 155
+Average time measured for packing large msg 10 time: 17.849 micro second.
+benchmark short message serialization: 0.1 us
+benchmark short message deserialization: 0.3 us
+benchmark double serialization: 0 us
+benchmark double deserialization: 0.3 us
+benchmark int serialization: 0 us
+benchmark int deserialization: 0 us
+TTL for ping() packet 0 : 253.874 micro second.
+TTL for ping() packet 1 : 126.105 micro second.
+TTL for ping() packet 2 : 76.109 micro second.
+TTL for ping() packet 3 : 68.364 micro second.
+TTL for ping() packet 4 : 67.457 micro second.
+Average TTL for ping() on 10 packets: 65.799 micro second.
+TTL for string packet 0 : 13010.312 micro second.
+TTL for string packet 1 : 11346.313 micro second.
+TTL for string packet 2 : 11957.516 micro second.
+TTL for string packet 3 : 11965.986 micro second.
+TTL for string packet 4 : 11912.698 micro second.
+Average TTL for ping() on 6 packets of size 524288 Bytes: 11392.342 micro second.
+throughput: 46.0211 MegaBytes/Second
+
+Optimized Ofast:
+Average time measured for packing int 10 time: 2.433 micro second.
+Average time measured for packing double 10 time: 0.616 micro second.
+Average time measured for packing string of length 8 10 time: 1.402 micro second.
+Average time measured for packing string of length 16 10 time: 0.615 micro second.
+Average time measured for packing string of length 32 10 time: 0.619 micro second.
+Average time measured for packing string of length 64 10 time: 0.590 micro second.
+Average time measured for packing string of length 128 10 time: 0.639 micro second.
+Average time measured for packing string of length 256 10 time: 0.669 micro second.
+Average time measured for packing string of length 512 10 time: 1.424 micro second.
+Average time measured for packing string of length 1024 10 time: 2.133 micro second.
+Average time measured for packing string of length 2048 10 time: 3.772 micro second.
+Average time measured for packing string of length 4096 10 time: 8.767 micro second.
+Average time measured for packing string of length 8192 10 time: 18.141 micro second.
+Average time measured for packing short msg 10 time: 0.903 micro second.
+SendLargeMsg flush time: 213
+SendLargeMsg flush time: 120
+SendLargeMsg flush time: 112
+SendLargeMsg flush time: 91
+SendLargeMsg flush time: 91
+SendLargeMsg flush time: 91
+SendLargeMsg flush time: 91
+SendLargeMsg flush time: 93
+SendLargeMsg flush time: 94
+SendLargeMsg flush time: 93
+Average time measured for packing large msg 10 time: 18.926 micro second.
+benchmark short message serialization: 0.1 us
+benchmark short message deserialization: 0.2 us
+benchmark double serialization: 0 us
+benchmark double deserialization: 0.2 us
+benchmark int serialization: 0 us
+benchmark int deserialization: 0 us
+TTL for ping() packet 0 : 193.690 micro second.
+TTL for ping() packet 1 : 79.267 micro second.
+TTL for ping() packet 2 : 70.539 micro second.
+TTL for ping() packet 3 : 64.771 micro second.
+TTL for ping() packet 4 : 63.723 micro second.
+Average TTL for ping() on 10 packets: 63.546 micro second.
+TTL for string packet 0 : 44565.133 micro second.
+TTL for string packet 1 : 42821.973 micro second.
+TTL for string packet 2 : 42416.981 micro second.
+TTL for string packet 3 : 42637.931 micro second.
+TTL for string packet 4 : 41339.651 micro second.
+Average TTL for ping() on 1 packets of size 2097152 Bytes: 41283.663 micro second.
+throughput: 50.7986 MegaBytes/Second
+
+
+
+
+Optimized with bench first int two machines:
+first bench int: 20.176
+Average time measured for packing int 10 time: 0.548 micro second.
+Average time measured for packing double 10 time: 0.573 micro second.
+Average time measured for packing string of length 8 10 time: 1.446 micro second.
+Average time measured for packing string of length 16 10 time: 0.666 micro second.
+Average time measured for packing string of length 32 10 time: 0.627 micro second.
+Average time measured for packing string of length 64 10 time: 0.590 micro second.
+Average time measured for packing string of length 128 10 time: 0.646 micro second.
+Average time measured for packing string of length 256 10 time: 0.687 micro second.
+Average time measured for packing string of length 512 10 time: 1.405 micro second.
+Average time measured for packing string of length 1024 10 time: 2.218 micro second.
+Average time measured for packing string of length 2048 10 time: 3.414 micro second.
+Average time measured for packing string of length 4096 10 time: 7.236 micro second.
+Average time measured for packing string of length 8192 10 time: 17.542 micro second.
+Average time measured for packing short msg 10 time: 0.872 micro second.
+SendLargeMsg flush time: 206
+SendLargeMsg flush time: 96
+SendLargeMsg flush time: 93
+SendLargeMsg flush time: 92
+SendLargeMsg flush time: 95
+SendLargeMsg flush time: 93
+SendLargeMsg flush time: 81
+SendLargeMsg flush time: 85
+SendLargeMsg flush time: 80
+SendLargeMsg flush time: 82
+Average time measured for packing large msg 10 time: 17.068 micro second.
+benchmark short message serialization: 0.1 us
+benchmark short message deserialization: 0.2 us
+benchmark double serialization: 0 us
+benchmark double deserialization: 0.2 us
+benchmark int serialization: 0 us
+benchmark int deserialization: 0 us
+TTL for ping() packet 0 : 243.667 micro second.
+TTL for ping() packet 1 : 76.372 micro second.
+TTL for ping() packet 2 : 66.180 micro second.
+TTL for ping() packet 3 : 64.000 micro second.
+TTL for ping() packet 4 : 61.424 micro second.
+Average TTL for ping() on 10 packets: 71.430 micro second.
+TTL for string packet 0 : 92324.294 micro second.
+TTL for string packet 1 : 89635.279 micro second.
+TTL for string packet 2 : 87581.713 micro second.
+TTL for string packet 3 : 88173.618 micro second.
+TTL for string packet 4 : 85062.840 micro second.
+Average TTL for ping() on 1 packets of size 4194304 Bytes: 85500.139 micro second.
+throughput: 49.0561 MegaBytes/Second
+
+Optimized with Ofast and 1st int local
+irst bench int: 19.98
+Average time measured for packing int 10 time: 0.495 micro second.
+Average time measured for packing double 10 time: 0.624 micro second.
+Average time measured for packing string of length 8 10 time: 1.402 micro second.
+Average time measured for packing string of length 16 10 time: 0.605 micro second.
+Average time measured for packing string of length 32 10 time: 0.594 micro second.
+Average time measured for packing string of length 64 10 time: 0.581 micro second.
+Average time measured for packing string of length 128 10 time: 0.623 micro second.
+Average time measured for packing string of length 256 10 time: 0.645 micro second.
+Average time measured for packing string of length 512 10 time: 1.344 micro second.
+Average time measured for packing string of length 1024 10 time: 2.154 micro second.
+Average time measured for packing string of length 2048 10 time: 3.259 micro second.
+Average time measured for packing string of length 4096 10 time: 7.005 micro second.
+Average time measured for packing string of length 8192 10 time: 17.595 micro second.
+Average time measured for packing short msg 10 time: 0.909 micro second.
+SendLargeMsg flush time: 204
+SendLargeMsg flush time: 136
+SendLargeMsg flush time: 91
+SendLargeMsg flush time: 96
+SendLargeMsg flush time: 87
+SendLargeMsg flush time: 93
+SendLargeMsg flush time: 92
+SendLargeMsg flush time: 98
+SendLargeMsg flush time: 94
+SendLargeMsg flush time: 92
+Average time measured for packing large msg 10 time: 17.625 micro second.
+benchmark short message serialization: 0.1 us
+benchmark short message deserialization: 0.3 us
+benchmark double serialization: 0 us
+benchmark double deserialization: 0.3 us
+benchmark int serialization: 0 us
+benchmark int deserialization: 0 us
+TTL for ping() packet 0 : 269.163 micro second.
+TTL for ping() packet 1 : 71.275 micro second.
+TTL for ping() packet 2 : 68.758 micro second.
+TTL for ping() packet 3 : 63.454 micro second.
+TTL for ping() packet 4 : 65.368 micro second.
+Average TTL for ping() on 10 packets: 48.148 micro second.
+TTL for string packet 0 : 59828.444 micro second.
+TTL for string packet 1 : 55049.785 micro second.
+TTL for string packet 2 : 46577.365 micro second.
+TTL for string packet 3 : 44675.593 micro second.
+TTL for string packet 4 : 43864.449 micro second.
+Average TTL for ping() on 1 packets of size 4194304 Bytes: 46363.384 micro second.
+throughput: 90.4659 MegaBytes/Second
+
+Average TTL for ping() on 2 packets of size 4194304 Bytes: 42225.993 micro second.
+throughput: 99.3299 MegaBytes/Second
+2^19 16bytes
+
+No optimization with 1st bench int:
+first bench int: 8.219
+Average time measured for packing int 10 time: 2.274 micro second.
+Average time measured for packing double 10 time: 2.272 micro second.
+Average time measured for packing string of length 8 10 time: 3.157 micro second.
+Average time measured for packing string of length 16 10 time: 2.423 micro second.
+Average time measured for packing string of length 32 10 time: 2.327 micro second.
+Average time measured for packing string of length 64 10 time: 2.251 micro second.
+Average time measured for packing string of length 128 10 time: 2.397 micro second.
+Average time measured for packing string of length 256 10 time: 2.521 micro second.
+Average time measured for packing string of length 512 10 time: 3.387 micro second.
+Average time measured for packing string of length 1024 10 time: 4.256 micro second.
+Average time measured for packing string of length 2048 10 time: 5.316 micro second.
+Average time measured for packing string of length 4096 10 time: 9.145 micro second.
+Average time measured for packing string of length 8192 10 time: 19.744 micro second.
+Average time measured for packing short msg 10 time: 3.289 micro second.
+SendLargeMsg flush time: 262
+SendLargeMsg flush time: 155
+SendLargeMsg flush time: 124
+SendLargeMsg flush time: 120
+SendLargeMsg flush time: 121
+SendLargeMsg flush time: 182
+SendLargeMsg flush time: 145
+SendLargeMsg flush time: 115
+SendLargeMsg flush time: 115
+SendLargeMsg flush time: 117
+Average time measured for packing large msg 10 time: 77.377 micro second.
+benchmark short message serialization: 1.1 us
+benchmark short message deserialization: 1.3 us
+benchmark double serialization: 0 us
+benchmark double deserialization: 1.9 us
+benchmark int serialization: 0 us
+benchmark int deserialization: 0 us
+TTL for ping() packet 0 : 212.784 micro second.
+TTL for ping() packet 1 : 59.650 micro second.
+TTL for ping() packet 2 : 52.487 micro second.
+TTL for ping() packet 3 : 49.301 micro second.
+TTL for ping() packet 4 : 50.908 micro second.
+Average TTL for ping() on 10 packets: 48.085 micro second.
+TTL for string packet 0 : 60881.381 micro second.
+TTL for string packet 1 : 51997.171 micro second.
+TTL for string packet 2 : 44552.302 micro second.
+TTL for string packet 3 : 46218.176 micro second.
+TTL for string packet 4 : 45854.175 micro second.
+Average TTL for ping() on 2 packets of size 4194304 Bytes: 41761.717 micro second.
+throughput: 100.434 MegaBytes/Second
+
+
+
+My laptop with ofast:
+first bench int: 5.3
+Average time measured for packing int 10 time: 0.150 micro second.
+Average time measured for packing double 10 time: 0.130 micro second.
+Average time measured for packing string of length 8 10 time: 0.390 micro second.
+Average time measured for packing string of length 16 10 time: 0.160 micro second.
+Average time measured for packing string of length 32 10 time: 0.160 micro second.
+Average time measured for packing string of length 64 10 time: 0.130 micro second.
+Average time measured for packing string of length 128 10 time: 0.120 micro second.
+Average time measured for packing string of length 256 10 time: 0.130 micro second.
+Average time measured for packing string of length 512 10 time: 0.380 micro second.
+Average time measured for packing string of length 1024 10 time: 0.560 micro second.
+Average time measured for packing string of length 2048 10 time: 1.090 micro second.
+Average time measured for packing string of length 4096 10 time: 1.820 micro second.
+Average time measured for packing string of length 8192 10 time: 3.760 micro second.
+Average time measured for packing short msg 10 time: 0.200 micro second.
+SendLargeMsg flush time: 100
+SendLargeMsg flush time: 0
+SendLargeMsg flush time: 0
+SendLargeMsg flush time: 0
+SendLargeMsg flush time: 0
+SendLargeMsg flush time: 100
+SendLargeMsg flush time: 0
+SendLargeMsg flush time: 0
+SendLargeMsg flush time: 0
+SendLargeMsg flush time: 0
+Average time measured for packing large msg 10 time: 8.060 micro second.
+benchmark short message serialization: 0 us
+benchmark short message deserialization: 0.1 us
+benchmark double serialization: 0 us
+benchmark double deserialization: 0.2 us
+benchmark int serialization: 0 us
+benchmark int deserialization: 0 us
+TTL for ping() packet 0 : 261.800 micro second.
+TTL for ping() packet 1 : 139.200 micro second.
+TTL for ping() packet 2 : 118.100 micro second.
+TTL for ping() packet 3 : 113.000 micro second.
+TTL for ping() packet 4 : 136.600 micro second.
+Average TTL for ping() on 10 packets: 124.570 micro second.
+TTL for string packet 0 : 16459.300 micro second.
+TTL for string packet 1 : 16773.200 micro second.
+TTL for string packet 2 : 16441.800 micro second.
+TTL for string packet 3 : 15808.400 micro second.
+TTL for string packet 4 : 16588.000 micro second.
+Average TTL for ping() on 2 packets of size 4194304 Bytes: 16424.800 micro second.
+throughput: 255.364 MegaBytes/Second
+
+RTT for string packet of size 2048 Bytes: 317.989 micro second.
+throughput: 6.44047 MegaBytes/Second
+RTT for string packet of size 4096 Bytes: 300.533 micro second.
+throughput: 13.6291 MegaBytes/Second
+RTT for string packet of size 8192 Bytes: 382.383 micro second.
+throughput: 21.4235 MegaBytes/Second
+RTT for string packet of size 16384 Bytes: 469.660 micro second.
+throughput: 34.8848 MegaBytes/Second
+RTT for string packet of size 32768 Bytes: 803.696 micro second.
+throughput: 40.7716 MegaBytes/Second
+RTT for string packet of size 65536 Bytes: 1537.556 micro second.
+throughput: 42.6235 MegaBytes/Second
+RTT for string packet of size 131072 Bytes: 3111.343 micro second.
+throughput: 42.1271 MegaBytes/Second
+RTT for string packet of size 262144 Bytes: 5495.542 micro second.
+throughput: 47.7012 MegaBytes/Second
+RTT for string packet of size 524288 Bytes: 11400.785 micro second.
+throughput: 45.987 MegaBytes/Second

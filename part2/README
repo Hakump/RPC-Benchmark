@@ -1,0 +1,106 @@
+Part 2 - UDP
+All code is contained in part2 directory
+>>cd part2
+
+Run steps:
+>> make clean
+>> make
+./server port_number drop_percentage
+Example command:
+>> ./server 8000 0
+
+./client hostname server_port_number
+Example command:
+>> ./client localhost 8000
+
+For graphs, kindly refer to report.pdf in P1 directory
+
+Small message = 24 bytes
+Large message = 65500 bytes
+
+1 -- Overhead of sending a message: 
+--> part2/client.cc #52-#58
+--> part2/udp.cc #71-#74
+--> part2/common.h #21
+
+--Same machine (without -O flag):
+    Overhead for small message  = 120 - 180ns
+    Overhead for large message  = 15 - 20us
+
+--Different machine (without -O flag):
+    Overhead for small message  = 300 - 600ns
+    Overhead for large message  = 40 - 90us
+
+==> Overhead differences observed due to CPU throttling in CSL machines
+==> One machine running at 3.2GHz while the other is at 1.2GHz
+
+2 -- Round trip transmission time:
+--Measured between UDP_Write and UDP_Read in client_helper.cc file
+--> part2/client_helper.cc #72-#81, #53-#55
+--> part2/client.cc #60-#65
+--> part2/common.h #22
+
+--Same machine (without -O flag):
+    RTT for small message  = 40 - 90us
+    RTT for large message  = 100 - 200us
+
+--Different machine (without -O flag):
+    RTT for small message  = 170 - 250us
+    RTT for large message  = 0.8 - 1ms
+
+3 -- Bandwidth:
+
+--> part2/client.cc #85 - #95
+--> part2/client.cc #23 - #29
+--> part2/common.h #24
+
+--Same machine (without -O flag):
+    Bandwidth for small message  =  2 MB/s
+    Bandwidth for large message  = 1.8 - 2.5 GB/s
+
+--Different machine (without -O flag):
+    Bandwidth for small message  = 350 - 400 KB/s
+    Bandwidth for large message  = 70 - 90 MB/s
+
+Bandwidth optimisation:
+Bandwidth is increasing with increasing packet size (Ref:report.pdf) as we are able to send more bytes in a single request. In client code, the programmed timeout impacts the bandwidth. It must be kept at 1.5 - 2x to obtain optimal bandwidth. As keeping the timeout too low will cause many messages to be sent before server can acknowledge and too high timeout will waste bandwidth.
+
+Client blocking code is also restricting the bandwidth and to optimize for bandwidth, we can send a stream of different packets to utilize it
+
+
+B. Reliability:
+--> part2/server.cc #37-#46 (Drop logic in server)
+--> part2/client_helper.cc #49-#70 (Retry logic in client)
+--> part2/client.cc #67-#82
+--> part2/common.h #23
+
+Number of messages sent = 500
+
+Server code equipped to drop ack's based on drop percentage
+Drop percentage | Dropped messages |  Total RTT
+0  |      0 |    24ms
+10 |     49 |   427ms
+20 |    105 |   902ms
+30 |    208 |  1757ms
+40 |    314 |  2717ms
+50 |    467 |  3894ms
+60 |    747 |  6289ms
+70 |   1049 |  8813ms
+80 |   1726 | 14388ms
+90 |   3913 | 32452ms
+
+C. Compiler optimisation: (make clean;make opt)
+--We didn't observe much differences due to compiler optimisation flags. 
+--Saw difference in measurements due to CPU throttling on CSL machines. Hence, the differences might not have been observed.
+
+Comparison of UDP vs thrift:
+Max Bandwidth achieved in UDP = 90MB/s
+Max Bandwidth achieved in thrift = 50MB/s
+
+Msg size(kB) |RTT-UDP(us)  |RTT-Thrift(us)
+65	|600	|1537
+32	|350	|803
+16	|240	|469
+8	|150	|382
+4	|127	|300
+2	|95	    |317
